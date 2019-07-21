@@ -33,22 +33,9 @@ def mlbStatus(outs, base_one, base_two, base_thr):
     return xstatus
 
 ### A Dictionary for cities with two teams in a league
+### Changed to an external file. Better to manage that way.
 
-specialDict = { "MLBMets": "NY Mets",
-              "MLBYankees": "NY Yankees",
-              "MLBCubs": "Chicago Cubs",
-              "MLBWhite Sox": "Chi White Sox",
-              "MLBAngels": "LA Angels",
-              "MLBDodgers": "LA Dodgers",
-              "NHLRangers": "NY Rangers",
-              "NHLIslanders": "NY Islanders",
-              "NFLGiants": "NY Giants",
-              "NFLJets": "NY Jets",
-              "NBAClippers": "LA Clippers",
-              "NBALakers": "LA Lakers",
-              "NFLRams": "LA Rams",
-              "NFLChargers": "LA Chargers"
-              }
+specialDict = eval(open("DupNicknames.txt").read())
 
 ### URL/APIs to go grab JSON endpoints
 
@@ -74,8 +61,8 @@ time.sleep(2)
 
 for sport in url:
 
-### If it's before 11am local time, so yesterday's score
-### After 11am, print today's score
+### If it's before 11am local time, print yesterday's score
+### After 11am, print today's upcoming games/scores
     
     tod = datetime.datetime.now()
     yest = datetime.datetime.now() - timedelta(days=1)

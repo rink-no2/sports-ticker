@@ -42,6 +42,7 @@ specialDict = eval(open("DupNicknames.txt").read())
 url = ["http://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard"
        ,"http://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard"
        ,"http://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/scoreboard"
+       ,"http://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard"
       ]
 
 ### Set up initial window
@@ -93,10 +94,7 @@ for sport in url:
             base_one = todos["events"][i]["competitions"][0]["situation"]["onFirst"]
             base_two = todos["events"][i]["competitions"][0]["situation"]["onSecond"]
             base_thr = todos["events"][i]["competitions"][0]["situation"]["onThird"]
-            print()
-            print(outs, base_one, base_two, base_thr)
             xStat = mlbStatus(outs, base_one, base_two, base_thr)
-            print(xStat)
 
 ###  Check the dictionary for two-team per sport cities
             

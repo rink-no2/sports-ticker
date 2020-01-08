@@ -1,0 +1,12 @@
+{"80" : "FBS",
+"1" : "ACC",
+"151" : "American",
+"4" : "Big 12",
+"5" : "Big Ten",
+"12" : "C-USA",
+"18" : "FBS Ind",
+"15" : "MAC",
+"17" : "Mt. West",
+"9" : "Pac 12",
+"8" : "SEC",
+"37" : "Sun Belt"}
